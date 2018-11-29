@@ -17,7 +17,7 @@ class App extends Component {
 
   // API Call
   async componentDidMount() {
-    const response = await fetch('http://localhost:8082/api/books')
+    const response = await fetch('https://morning-depths-57034.herokuapp.com/api/books')
     const json = await response.json()
     this.setState({books: json, filteredBooks: json})
   }
@@ -67,7 +67,7 @@ class App extends Component {
     })
   }
 
-  // Render function 
+  // Render function
   render() {
     return (
       <div>
